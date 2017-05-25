@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hell is here</title>
 </head>
-<body>
+<body ng-app="Learn" ng-init="message='Welcome'" ng-controller="classifiedCtrl">
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/components/classifiedCtrl.js"></script>
     <div>
+        <input type="text" placeholder="Type ur Name" ng-model="name" />
         <p>Hell is Here</p>
+        <p>{{message}}</p>
+        <h1>{{name}}</h1>
     </div>
 </body>
 </html>
