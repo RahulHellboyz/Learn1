@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Hell is here</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hell is here</title>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/node_modules/mdi/css/materialdesignicons.min.css" media="all">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-app="Learn" ng-init="message='Welcome'" ng-controller="classifiedCtrl">
-    <script src="/node_modules/angular/angular.js"></script>
-    <script src="/scripts/app.js"></script>
-    <script src="/components/classifiedCtrl.js"></script>
-    <div>
-        <input type="text" placeholder="Type ur Name" ng-model="name" />
-        <p>Hell is Here</p>
-        <p>{{message}}</p>
-        <h1>{{name}}</h1>
-    </div>
+<body ng-app="Learn">
+
+    <ui-view></ui-view>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>    
+    <script src="scripts/app.js"></script>
+    <script src="components/classifiedCtrl.js"></script>
+    <script src="components/classified.fac.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 </body>
 </html>

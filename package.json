@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RahulHellboyz/Learn1/issues"
   },
-  "homepage": "https://github.com/RahulHellboyz/Learn1#readme"
+  "homepage": "https://github.com/RahulHellboyz/Learn1#readme",
+  "dependencies": {
+    "angular-ui-router": "^1.0.3"
+  }
 }
