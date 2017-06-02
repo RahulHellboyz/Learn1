@@ -2,7 +2,7 @@
     "use strict";
 
     angular.module("Learn")
-    .controller("classifiedCtrl",function($http,classifiedFactory,$mdSidenav,$mdToast,$mdDialog){
+    .controller("classifiedCtrl",function($scope,$http,$state,$mdSidenav,$mdToast,$mdDialog,classifiedFactory){
 
         var vm = this;
 
@@ -32,9 +32,16 @@
            vm.classifieds=classified.data;  
            vm.categories=getCategories(vm.classifieds);          
         });
+
+        $scope.$on('newClassified',function(event, classified){
+            classified.id = vm.classifieds.length+1;
+            vm.classifieds.push(classified);
+            showToast("Classified saved!");
+        });
         
         function openSidebar(){            
-            $mdSidenav('left').open();
+            $state.go('classifieds.new');
+            // $mdSidenav('left').open();
         };
 
         function closeSidebar(){

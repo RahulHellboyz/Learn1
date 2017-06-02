@@ -11,5 +11,11 @@ angular.module("Learn",["ngMaterial","ui.router"])
         controller:"classifiedCtrl",
         controllerAs:"vm"
     })
+    .state('classifieds.new',{
+        url:'/new',
+        templateUrl:'components/classifieds/new/newClassifiedstpl.html',
+        controller:"newClassifiedCtrl",
+        controllerAs:"vm"
+    })
 });
 
